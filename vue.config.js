@@ -11,6 +11,7 @@ module.exports = defineConfig({
         return args
       })
   },
+  // vant自定义主题配置
   css: {
     loaderOptions: {
       less: {

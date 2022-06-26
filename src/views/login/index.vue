@@ -1,13 +1,14 @@
 <template>
-<div>
-    <!-- 一级路由 -->
-    <router-view></router-view>
-</div>
+  <div>
+    <van-nav-bar title="登录">
+      <van-icon name="cross" slot="left" />
+    </van-nav-bar>
+  </div>
 </template>
 
 <script>
 export default {
-  created () {},
+  created () { },
   data () {
     return {}
   },
@@ -20,5 +21,4 @@ export default {
 </script>
 
 <style scoped lang='less'>
-
 </style>

@@ -1,3 +1,4 @@
+import store from '@/store'
 import request from '@/utils/request'
 // 获取短信验证
 export const getSmsCode = (mobile) => {
@@ -5,7 +6,7 @@ export const getSmsCode = (mobile) => {
     url: `/sms/codes/${mobile}`
   })
 }
-
+// 验证登录
 export const login = ({ mobile, code }) => {
   return request({
     method: 'POST',
@@ -13,6 +14,15 @@ export const login = ({ mobile, code }) => {
     data: {
       mobile,
       code
+    }
+  })
+}
+// 获取用户信息
+export const getUserInfo = () => {
+  return request({
+    url: 'user',
+    headers: {
+      Authorization: 'Bearer ' + store.state.user.token
     }
   })
 }
